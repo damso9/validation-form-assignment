@@ -56,6 +56,26 @@ function Success(message) {
     //add error message inside small
     small.innerText = message;
 }
+
+let state = false;
+function toggle() {
+    if (state){
+        document.querySelector("#password").setAttribute("type","password");
+        document.querySelector("#eye").style.color = "#7a797e";
+        state = false;
+    } else {
+        document.querySelector("#password").setAttribute("type","text");
+        document.querySelector("#eye").style.color = "#5887ef";
+        state = true;
+
+    }
+}
+
+
+
+
+
+
 // function setSuccessFor(input) {
 //     const formControl = input.parentElement;
 //     formControl.className = 'data-success';
